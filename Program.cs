@@ -16,8 +16,10 @@ namespace Y9_DEC_TO_BIN_SKELETON
             int myStringAsInt = Convert.ToInt32(myString); //watch me cast from string to int
 
             //MAIN:  NUMBER CONVERSION PROGRAM
-
+            Console.WriteLine(numberConversion(926,2));
+            string stringS = numberConversion(926, 2);
             //CODE GOES HERE
+            Console.WriteLine(StringInString("I want"," a lot of food"));
         }
 
         //static void means the function will not return a value so it does not need a data type 
@@ -25,8 +27,14 @@ namespace Y9_DEC_TO_BIN_SKELETON
         static string numberConversion(int number, int numberbase)
         {
             //CODE GOES HERE
+            string result= Convert.ToString(number+numberbase);
+            return result; //REMOVE THE RED LINE!   
+        }
 
-            return result; //REMOVE THE RED LINE!   test test test
+        static string StringInString(string string1, string string2)
+        {
+            string result = string1 + string2;
+            return result;
         }
     }
 }
