@@ -12,10 +12,11 @@ namespace Y9_DEC_TO_BIN_SKELETON
         static void Main(string[] args)
         {
             Console.WriteLine("Input your denary number");
-            int denary=Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(DenaryToBinary(denary));
+            int denary = Convert.ToInt32(Console.ReadLine());
+            int[] myFinalInt = (DenaryToBinary(denary));
+            Console.WriteLine(myFinalInt);
         }
-        private static int DenaryToBinary(int denary)
+        private static int[] DenaryToBinary(int denary)
         {
             int[] binaryCalculated = new int[8];
             int[] binary = new int[8];
@@ -26,9 +27,9 @@ namespace Y9_DEC_TO_BIN_SKELETON
             }
             for (int i = binary.Length - 1; i < 0; i--)
             {
-                binaryCalculated[i]=binary[i];
+                binaryCalculated[binary.Length - i] = binary[i];
             }
-            return Convert.ToInt32(binaryCalculated);
+            return binaryCalculated;
         }
     }
 }
